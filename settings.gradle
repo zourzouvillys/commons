@@ -1,0 +1,5 @@
+
+rootProject.name = 'zcommons'
+
+include 'zulu'
+project(':zulu').projectDir = file('zulu')
