@@ -3,26 +3,26 @@ package io.zrz.zulu.values;
 import io.zrz.zulu.types.ZPrimitiveScalarType;
 import io.zrz.zulu.types.ZScalarType;
 
-public class ZBoolValue implements ZScalarValue {
+public class ZDoubleValue implements ZScalarValue {
 
-  private boolean value;
+  private double value;
 
-  public ZBoolValue(boolean value) {
+  public ZDoubleValue(double value) {
     this.value = value;
   }
 
   @Override
   public ZScalarType valueType() {
-    return ZPrimitiveScalarType.BOOLEAN;
+    return ZPrimitiveScalarType.DOUBLE;
   }
+
+  /**
+   * only for debugging purposes!
+   */
 
   @Override
   public String toString() {
-    return Boolean.toString(value);
-  }
-
-  public boolean boolValue() {
-    return value;
+    return Double.toString(value);
   }
 
 }

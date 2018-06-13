@@ -21,4 +21,12 @@ public class ZIntValue implements ZScalarValue {
     return Long.toString(value);
   }
 
+  public long longValue() {
+    return value;
+  }
+
+  public int intValue() {
+    return (int) value;
+  }
+
 }

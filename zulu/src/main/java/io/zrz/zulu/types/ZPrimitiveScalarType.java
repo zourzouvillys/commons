@@ -15,4 +15,9 @@ public enum ZPrimitiveScalarType implements ZScalarType {
     return ZTypeKind.SCALAR;
   }
 
+  @Override
+  public ZPrimitiveScalarType baseType() {
+    return this;
+  }
+
 }

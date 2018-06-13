@@ -30,4 +30,15 @@ public interface ZField {
     return Optional.empty();
   }
 
+  /**
+   * the constant value for this field, if it has one.
+   * 
+   * if the field has a constant value, then it will not have a default value.
+   * 
+   */
+
+  default Optional<ZValue> constantValue() {
+    return Optional.empty();
+  }
+
 }

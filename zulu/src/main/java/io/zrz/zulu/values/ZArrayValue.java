@@ -24,6 +24,10 @@ public interface ZArrayValue extends ZValue {
 
   Stream<ZValue> values();
 
+  /**
+   * 
+   */
+
   @Override
   ZArrayType valueType();
 

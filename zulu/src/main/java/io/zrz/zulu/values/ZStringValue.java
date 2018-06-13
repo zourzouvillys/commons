@@ -25,4 +25,8 @@ public class ZStringValue implements ZScalarValue {
     return "'" + value.replace("'", "\\'") + "'";
   }
 
+  public String stringValue() {
+    return this.value;
+  }
+
 }

@@ -7,7 +7,7 @@ import java.util.List;
  * a use of another type.
  */
 
-public final class ZTypeUse {
+public class ZTypeUse {
 
   private ZType type;
   private List<ZAnnotation> annotations = null;
