@@ -1,5 +1,6 @@
 plugins {
   id 'java-library'
+  id 'maven'
 }
 
 group = 'io.zrz'
@@ -22,3 +23,42 @@ repositories {
 
 sourceCompatibility = 8
 targetCompatibility = 8
+
+// --------------------------------------------------
+// install
+// --------------------------------------------------
+
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+tasks.withType(Javadoc) {
+      options.addStringOption('Xdoclint:none', '-quiet')
+}
+    
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+// To specify a license in the pom:
+install {
+  repositories.mavenInstaller {
+    pom.project {
+      licenses {
+        license {
+          name 'The Apache Software License, Version 2.0'
+          url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+          distribution 'repo'
+        }
+      }
+    }
+  }
+}
