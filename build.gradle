@@ -2,6 +2,8 @@
 plugins {
 }
 
+version = '1.0'
+group = 'io.zrz'
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.8'

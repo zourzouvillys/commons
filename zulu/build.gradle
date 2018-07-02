@@ -6,6 +6,7 @@ plugins {
 group = 'io.zrz'
 version = '1.0'
 
+
 jar {
     baseName = 'zulu' 
 }
